@@ -1,0 +1,66 @@
+{
+  "declare": {
+    "default": {
+      "type": "topic",
+      "config": {
+        "passive": false,
+        "durable": false,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": null
+      },
+      "connection_type": "url",
+      "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+    },
+    "long.test_exchange": {
+      "type": "topic",
+      "config": {
+        "passive": false,
+        "durable": true,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": null
+      },
+      "connection_type": "setting",
+      "setting": "default"
+    },
+    "test": {
+      "type": "fanout",
+      "config": {
+        "passive": false,
+        "durable": false,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": null
+      },
+      "connection_type": "url",
+      "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+    },
+    "test1": {
+      "type": "fanout",
+      "config": {
+        "passive": false,
+        "durable": false,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": null
+      },
+      "connection_type": "url",
+      "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+    }
+  },
+  "bind": {
+    "default": [
+      {
+        "name": "test",
+        "routing_key": "*.*.*",
+        "arguments": null
+      },
+      {
+        "name": "test2",
+        "routing_key": "*.*.*",
+        "arguments": null
+      }
+    ]
+  }
+}

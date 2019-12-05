@@ -1,0 +1,77 @@
+{
+    "declare": {
+        "test": {
+            "config": {
+                "passive": false,
+                "durable": false,
+                "exclusive": false,
+                "auto_delete": false,
+                "arguments": {
+                    "x-message-ttl": 10
+                }
+            },
+            "connection_type": "url",
+            "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+        },
+        "test1": {
+            "config": {
+                "passive": false,
+                "durable": true,
+                "exclusive": false,
+                "auto_delete": false,
+                "arguments": null
+            },
+            "connection_type": "url",
+            "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+        },
+        "test2": {
+            "config": {
+                "passive": false,
+                "durable": true,
+                "exclusive": false,
+                "auto_delete": false,
+                "arguments": null
+            },
+            "connection_type": "url",
+            "url": "amqp://rzblafqf:ZnUhFd1ElXuzsUpUNsmgV-GmCpiQxqkz@woodpecker.rmq.cloudamqp.com/rzblafqf"
+        }
+    },
+    "bind": {
+        "test": [
+            {
+                "routing_key": "*.*.*",
+                "exchange": "default",
+                "arguments": null
+            },
+            {
+                "routing_key": "*.*.*",
+                "exchange": "test",
+                "arguments": null
+            }
+        ],
+        "test1": [
+            {
+                "routing_key": "*.*.*",
+                "exchange": "default",
+                "arguments": null
+            },
+            {
+                "routing_key": "*.*.*",
+                "exchange": "test",
+                "arguments": null
+            }
+        ],
+        "test2": [
+            {
+                "routing_key": "*.*.*",
+                "exchange": "default",
+                "arguments": null
+            },
+            {
+                "routing_key": "*.*.*",
+                "exchange": "test2",
+                "arguments": null
+            }
+        ]
+    }
+}
